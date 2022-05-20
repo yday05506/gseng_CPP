@@ -39,7 +39,7 @@ int main(void)
 	Person p = Person();
 	p.hi();
 
-	Person* person = new Person("ÇÑ½Â¿ø", "100");
+	Person* person = new Person("ÇÑ½Â¿ø", 100);
 	person->hi();
 
 	Person* people = new Person[5];
