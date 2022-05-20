@@ -34,6 +34,29 @@ void Person::hi()
 	cout << "나이 : " << nAge << endl;
 }
 
+class Student : public Person
+{
+private: 
+	int nHakbun;
+public :
+	Student();
+	Student(string, int, int);
+	void study();
+};
+
+Student::Student() : Person() {
+	nHakbun = 0;
+}
+
+Student::Student(string name, int age, int hakbun)
+	: Person(name, age), nHakbun(hakbun) {;}
+
+void Student::study()
+{
+	hi();
+	cout << "학번 : " << nHakbun << endl;
+}
+
 int main(void)
 {
 	Person p = Person();
@@ -45,6 +68,11 @@ int main(void)
 	Person* people = new Person[5];
 	people[0].hi();
 
+	Student s = Student();
+	s.study();
+
 	delete person;
 	delete[]people;
+
+	return 0;
 }
