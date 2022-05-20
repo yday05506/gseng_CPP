@@ -7,8 +7,8 @@ class Person
 {
 private :
 	string sName;
+protected:
 	int nAge;
-
 public:
 	Person();
 	Person(string name, int age);
@@ -55,6 +55,7 @@ void Student::study()
 {
 	hi();
 	cout << "ÇÐ¹ø : " << nHakbun << endl;
+	nAge = 100;
 }
 
 int main(void)
